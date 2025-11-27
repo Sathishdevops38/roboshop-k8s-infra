@@ -1,0 +1,80 @@
+# ----------------------------------------
+# 1. Operating System and Editor Files
+# ----------------------------------------
+.DS_Store
+*.swp
+*~
+# Logs and temp files
+*.log
+*.tmp
+# macOS
+.Trashes
+
+# ----------------------------------------
+# 2. Kubernetes and Kustomize Outputs
+# ----------------------------------------
+# Kustomize build outputs (common temporary file names)
+kustomization.yaml
+kustomization.yml
+kustomize.yaml
+kustomize.yml
+# Kustomize builds often output the final manifest into a single file
+manifest.yaml
+manifest.yml
+output.yaml
+output.yml
+# Generated files like resource hashes, etc.
+resource-list.txt
+
+# ----------------------------------------
+# 3. Sensitive Data and Credentials (CRITICAL)
+# ----------------------------------------
+# **NEVER** commit files containing secrets, passwords, or credentials.
+# Kubernetes Secrets that are not sealed (e.g., base64 encoded values)
+*-secret.yaml
+*-secret.yml
+secrets.yaml
+secrets.yml
+# Specific file names for credentials or configuration
+kubeconfig
+.kubeconfig
+id_rsa
+id_rsa.pub
+credentials
+.credentials
+
+# ----------------------------------------
+# 4. Helm Specific Files
+# ----------------------------------------
+# Package archives
+*.tgz
+*.tar.gz
+# Dependency caches
+charts/
+# Helm's status files
+.helm/
+# Output values file after rendering
+rendered-values.yaml
+
+# ----------------------------------------
+# 5. Tools and Local Development
+# ----------------------------------------
+# Minikube/Kind/k3d/Docker outputs
+.minikube/
+.kind/
+.k3d/
+.docker/
+# Terraform/Pulumi/Other IaC outputs (if managing k8s with IaC)
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+
+# ----------------------------------------
+# 6. General Build/Tooling Artifacts
+# ----------------------------------------
+bin/
+pkg/
+vendor/
