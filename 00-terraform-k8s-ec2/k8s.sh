@@ -14,11 +14,14 @@ sudo usermod -aG docker ec2-user
 #install kubectl
 sudo curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.34.2/2025-11-13/bin/linux/amd64/kubectl
 sudo chmod +x ./kubectl
-sudo mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+# This is a complex command block; be careful running it.
+sudo cp ./kubectl $HOME/bin/kubectl
+# Continue with the rest of the setup without sudo
+export PATH=$HOME/bin:$PATH
 
 #install eksctl
 sudo ARCH=amd64
 sudo PLATFORM=$(uname -s)_$ARCH
 sudo curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
 sudo tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
-sudo sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
+sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
