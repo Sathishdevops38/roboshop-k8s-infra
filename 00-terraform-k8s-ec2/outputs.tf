@@ -17,13 +17,13 @@ output "default_security_group_id" {
 }
 
 output "public_ip" {
-  value = module.docker.public_ip
+  value = module.k8s.public_ip
 }
 
 output "priavte_ip" {
-  value = module.docker.private_ip
+  value = module.k8s.private_ip
 }
 
 output "public_dns" {
-  value = module.docker.public_dns
+  value = module.k8s.public_dns
 }

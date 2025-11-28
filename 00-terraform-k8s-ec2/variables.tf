@@ -5,10 +5,10 @@ variable "environment"{
     default = "dev"
 }
 
-variable "docker_tags"{
+variable "k8s_tags"{
     default ={
         createdby = "terraform"
-        usage =  "docker"
+        usage =  "k8s"
     }
 }
 
