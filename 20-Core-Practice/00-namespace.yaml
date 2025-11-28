@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  roboshop-dev
+  labels:
+    environment: dev
+    app: roboshop
+    tier: frontend
+    owner: roboshop
+    team: paas
+    component: frontend
