@@ -1,29 +1,29 @@
-module "docker" {  
+module "k8s" {  
   source = "git::https://github.com/Sathishdevops38/terraform-modules.git//20-bastion-module?ref=main"
   project_name = var.project_name
   environment = var.environment
   subnet_id = local.subnet_id  
   instance_type = var.instance_type
   sg_ids =   [local.sg_id]
-  iam_profile_name = aws_iam_instance_profile.docker.name
+  iam_profile_name = aws_iam_instance_profile.k8s.name
   root_volume_size = 50
   root_volume_type = "gp3"
 
-  user_data = file("docker.sh")
+  user_data = file("k8s.sh")
   tags= merge(
-    var.docker_tags,
+    var.k8s_tags,
     local.common_tags,{
-      Name =  "${local.common_name_suffix}-docker"
+      Name =  "${local.common_name_suffix}-k8s"
     }
   )  
 }
 
-resource "aws_iam_instance_profile" "docker" {
-  name = "docker"
+resource "aws_iam_instance_profile" "k8s" {
+  name = "k8s"
   role = "BastionTerraformAdmin"
 }
 
-resource "aws_vpc_security_group_ingress_rule" "docker" {
+resource "aws_vpc_security_group_ingress_rule" "k8s" {
   security_group_id = local.sg_id
 
   cidr_ipv4   = "0.0.0.0/0"
