@@ -14,8 +14,8 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
-  - name: alamalinux
-    image: alamalinux:9
+  - name: almalinux
+    image: almalinux:9
     command: ["sleep", "100"] #"/bin/sh", "-c", "while true; do sleep 30; done"
     resources:
       limits:
