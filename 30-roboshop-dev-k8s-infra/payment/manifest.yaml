@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: joindevops/payment:v1
+        image: sathishdevops38/payment:v1
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
