@@ -57,7 +57,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: catalogue
   namespace: roboshop
 spec:

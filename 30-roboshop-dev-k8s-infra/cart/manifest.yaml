@@ -59,7 +59,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: cart
   namespace: roboshop
 spec:
