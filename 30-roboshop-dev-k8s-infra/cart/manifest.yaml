@@ -4,8 +4,6 @@ kind: ConfigMap
 metadata:
   name: cart
   namespace: roboshop
-  labels:
-    app: myapplication
 data:
   REDIS_HOST: "redis"
   CATALOGUE_HOST: "catalogue"
