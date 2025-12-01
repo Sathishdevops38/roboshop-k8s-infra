@@ -64,10 +64,9 @@ Metadata:
   namespace: roboshop
 spec:
   selector:
-    labels:
-      project: roboshop
-      component: cart
-      tier: backend
+    project: roboshop
+    component: cart
+    tier: backend
   ports:
     - protocol: TCP
       port: 8080 #serive port
