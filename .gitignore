@@ -19,8 +19,6 @@ kustomization.yml
 kustomize.yaml
 kustomize.yml
 # Kustomize builds often output the final manifest into a single file
-manifest.yaml
-manifest.yml
 output.yaml
 output.yml
 # Generated files like resource hashes, etc.
