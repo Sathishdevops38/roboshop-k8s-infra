@@ -1,0 +1,13 @@
+apiVesrion: v1
+kind: pod
+metadata:
+ name: nginx
+  labels:
+    app: nginx
+    project: roboshop
+    env: dev
+    tier: frontend
+spec:
+  containers:
+  - image:  nginx
+    name:  nginx
