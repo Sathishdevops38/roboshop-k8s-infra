@@ -45,7 +45,7 @@ spec:
       component: redis
       tier: db # has to match .spec.template.metadata.labels
   serviceName: "redis-headless" # this should be head less service name
-  replicas: 2 # by default is 1
+  replicas: 1 # by default is 1
   template:
     metadata:
       labels:
