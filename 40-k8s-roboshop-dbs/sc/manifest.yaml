@@ -2,7 +2,6 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: roboshop-ebs # Name of the StorageClass
-  namespace: roboshop
 provisioner: ebs.csi.aws.com # Example: for AWS EBS (use your actual provisioner)
 parameters:
   type: gp2 # Example: EBS volume type
