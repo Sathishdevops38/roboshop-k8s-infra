@@ -4,6 +4,6 @@ metadata:
   name: roboshop-ebs # Name of the StorageClass
 provisioner: ebs.csi.aws.com # Example: for AWS EBS (use your actual provisioner)
 parameters:
-  type: gp2 # Example: EBS volume type
+  type: gp3 # Example: EBS volume type
 reclaimPolicy: Delete # Or Retain
 volumeBindingMode: WaitForFirstConsumer # Or WaitForFirstConsumer
