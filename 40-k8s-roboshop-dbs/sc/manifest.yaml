@@ -3,7 +3,7 @@ kind: StorageClass
 metadata:
   name: roboshop # Name of the StorageClass
   namespace: roboshop
-provisioner: kubernetes.io/aws-ebs # Example: for AWS EBS (use your actual provisioner)
+provisioner: ebs.csi.aws.com # Example: for AWS EBS (use your actual provisioner)
 parameters:
   type: gp2 # Example: EBS volume type
 reclaimPolicy: Delete # Or Retain
