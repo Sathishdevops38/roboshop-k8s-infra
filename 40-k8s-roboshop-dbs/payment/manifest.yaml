@@ -45,6 +45,13 @@ spec:
         envFrom:
         - configMapRef:
             name: payment
+        resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+        limits:
+          cpu: 500m
+          memory: 500Mi    
         ports:
         - name: liveness-port
           containerPort: 8080
