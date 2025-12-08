@@ -1,1 +1,0 @@
-for i in mongodb redis mysql rabbitmq catalogue user cart shipping payment frontend;do cd $i; kubectl apply -f manifest.yaml;cd ..;done
