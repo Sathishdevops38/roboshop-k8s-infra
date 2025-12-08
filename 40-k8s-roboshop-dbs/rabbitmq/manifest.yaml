@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: rabbitmq
-        image: sathishdevops38/rabbitmq:v1
+        image: rabbitmq:3
         readinessProbe:
           tcpSocket:
             port:  5672 
