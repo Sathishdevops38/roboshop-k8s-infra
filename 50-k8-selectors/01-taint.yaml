@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taint-demo
+  # these are replica set labels
+  labels:
+    purpose: taint-demo
+    project: roboshop
+spec:
+  replicas: 1
+  selector:
+    # these labels are used to select pods
+    matchLabels:
+      purpose: taint-demo
+      project: roboshop
+  # pod definition
+  template:
+    metadata:
+      labels:
+        # purpose: dp-demo
+        purpose: taint-demo
+        project: roboshop
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
