@@ -32,11 +32,11 @@ resource "aws_vpc_security_group_ingress_rule" "k8s" {
   to_port     = 22
 }
 
-resource "aws_vpc_security_group_ingress_rule" "all_access" {
-  security_group_id = local.sg_id
-  ip_protocol       = "-1"
-  cidr_ipv4         = "0.0.0.0/0"
-  description       = "Allow all inbound traffic from IPv4"
-}
+# resource "aws_vpc_security_group_ingress_rule" "all_access" {
+#   security_group_id = local.sg_id
+#   ip_protocol       = "-1"
+#   cidr_ipv4         = "0.0.0.0/0"
+#   description       = "Allow all inbound traffic from IPv4"
+# }
 
 
