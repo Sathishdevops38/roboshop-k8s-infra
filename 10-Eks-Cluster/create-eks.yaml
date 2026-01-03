@@ -5,7 +5,7 @@ metadata:
   region: us-west-2
 nodeGroups:
   - name: roboshop-dev-ng
-    instanceType: t3.medium
+    instanceType: m7i-flex.large
     desiredCapacity: 2
     minSize: 1
     maxSize: 3
